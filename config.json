@@ -1,0 +1,93 @@
+{
+	"default": {
+		"ns": "127.0.0.2",
+		"nsec3": {
+			"tight": true
+		},
+		"ttl": 3600
+	},
+	"zones": [
+		{
+			"name": "root",
+			"origin": ".",
+			"parent": "",
+			"keysize": 1024,
+			"nsec3": {
+				"iterations": 0,
+				"salt": "aabbcc",
+				"algorithm": 1
+			},
+			"ns": [
+				{"ns": "a.root-servers.net.", "ip": "127.0.0.2"}
+			],
+			"soa": "a.root-servers.net a.root-servers.net 1 2 3 4 0",
+			"rrsets": []
+		},
+		{
+			"name": "example-1024-sha1-150-nosalt",
+			"origin": "ex1.",
+			"parent": "root",
+			"keysize": 1024,
+			"nsec3": {
+				"iterations": 150,
+				"salt": "",
+				"algorithm": 1
+			}
+		},
+		{
+			"name": "example-2048-sha1-500-nosalt",
+			"origin": "ex2.",
+			"parent": "root",
+			"keysize": 2048,
+			"nsec3": {
+				"iterations": 500,
+				"salt": "",
+				"algorithm": 1
+			}
+		},
+		{
+			"name": "example-4096-sha1-2500-nosalt",
+			"origin": "ex3.",
+			"parent": "root",
+			"keysize": 4096,
+			"nsec3": {
+				"iterations": 2500,
+				"salt": "",
+				"algorithm": 1
+			}
+		},
+		{
+			"name": "example-1024-sha1-150-salt",
+			"origin": "ex4.",
+			"parent": "root",
+			"keysize": 1024,
+			"nsec3": {
+				"iterations": 150,
+				"salt": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+				"algorithm": 1
+			}
+		},
+		{
+			"name": "example-2048-sha1-500-salt",
+			"origin": "ex5.",
+			"parent": "root",
+			"keysize": 2048,
+			"nsec3": {
+				"iterations": 500,
+				"salt": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+				"algorithm": 1
+			}
+		},
+		{
+			"name": "example-4096-sha1-2500-salt",
+			"origin": "ex6.",
+			"parent": "root",
+			"keysize": 4096,
+			"nsec3": {
+				"iterations": 2500,
+				"salt": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+				"algorithm": 1
+			}
+		}
+	]
+}
